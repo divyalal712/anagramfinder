@@ -3,10 +3,7 @@ package no.anagram.finder;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,7 +12,7 @@ public class AnagramFinderTest {
 
     @Test
     public void testFindAnagramsEmpty() {
-        List<String> words = Arrays.asList();
+        List<String> words = new ArrayList<>();
         Map<String, List<String>> expected = new HashMap<>();
         Map<String, List<String>> result = AnagramFinder.findAnagrams(words);
         assertEquals(expected, result);

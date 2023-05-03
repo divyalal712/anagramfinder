@@ -41,8 +41,7 @@ public class AnagramFinder {
         List<String> words = new ArrayList<>();
         ClassLoader classLoader = AnagramFinder.class.getClassLoader();
         Path path = Paths.get(classLoader.getResource(filename).toURI());
-        List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
-        words.addAll(lines);
+        words = Files.readAllLines(path, StandardCharsets.UTF_8);
         return words;
     }
 }
